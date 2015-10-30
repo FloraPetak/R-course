@@ -115,3 +115,24 @@ test1(x)
 ## its possible to change global variables but dont do that!!
 
 
+## save output: in new var; define before the loop!!
+
+# power calculation
+# delta = effect size
+
+sim.power.t.test <- function(nGroup = 35, delta = .2, nSimulations = 10000){
+  res <- numeric(nSimulations) # save output: in new var; 
+                                # define before the loop!!
+  
+  for(i in 1:nSimulations){
+    x1 <- rnorm(nGroup)
+    x2 <- rnorm(nGroup, mean = delta)
+    res[i] <- t.test(x1, x2, var.equal=TRUE)$p.value
+  }
+  return(sum(res < .05) / nSimulations)
+}
+
+sim.power.t.test (delta=.2)
+
+
+
