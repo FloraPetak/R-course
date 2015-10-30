@@ -48,6 +48,13 @@ test <- sample(c("yes", "no"), size=30, replace=TRUE)
 table(test) # useful only if you have a factor 
             # or sthg similar to a factor
 
+load("simdata.rData")
+
+# decide for each VP
+sim$keep <- ave(sim$answer, sim$vp, FUN=goodVP)
+sim <- subset(sim, sim$keep == TRUE)
+
+# version2: tapply
 
 
 
