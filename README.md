@@ -1,16 +1,18 @@
-# R-course: 30.10. 2015 (Brandt)
-x <- c(4,7,NA, 7)
-y <- c(5,7,2,9,5,9,NA,6,9)
+ 
+    # R-course: 30.10. 2015 (Brandt)
+  x <- c(4,7,NA, 7)
+  y <- c(5,7,2,9,5,9,NA,6,9)
 
-# compute sample variance removing missing values
-computeSampleVar <- function(x, na.rm = TRUE){
-  if(na.rm==TRUE){
-    x <- na.omit(x) # version 1
-    x <- x[! x %in% NA] # version 2 
-    x <- x[!is.na(x)] # version 3
-    return()
+  # compute sample variance removing missing values
+   
+   computeSampleVar <- function(x, na.rm = TRUE){
+   if(na.rm==TRUE){
+     x <- na.omit(x) # version 1
+     x <- x[! x %in% NA] # version 2 
+      x <- x[!is.na(x)] # version 3
+     return()
+   }
   }
-}
 
 computeSampleVar <- function(x, na.rm = TRUE){
   if(na.rm==TRUE){
