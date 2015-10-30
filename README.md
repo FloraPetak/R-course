@@ -75,5 +75,27 @@ test <- function(){
 print(x1)
 test()
 
+print(x1)
+test()
+
+
+# debug functions
+# print: see if it does what you want it to do
+# cat: similar to print, just easier to read
+# browser() - goes inside the function -> jump into the code
+    # and see what´s going on
+    # once bug found, remove browser!
+
+test <- function(){
+  print(x1) # global environment
+  x1 <- 3 # create new val in local env w same name
+  print(x1)
+  browser()  
+  return("shalala")
+}
+
+# execute code w browse -> next: execute next line; continue
+# debug: like browser in the first command 
+
 
 
