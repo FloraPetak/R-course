@@ -1,4 +1,4 @@
-# R-course
+# R-course: 30.10. 2015 (Brandt)
 x <- c(4,7,NA, 7)
 y <- c(5,7,2,9,5,9,NA,6,9)
 
