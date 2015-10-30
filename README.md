@@ -98,4 +98,18 @@ test <- function(){
 # debug: like browser in the first command 
 
 
+x2 <- 3
+test1 <- function(n){
+  y <- rep(1:n,n)
+  x <- 2
+  y <- y/x
+  y <- sort(y)
+  return(y)
+}
+
+debug(test1)
+test1(x)
+
+## its possible to change global variables but dont do that!!
+
 
