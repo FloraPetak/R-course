@@ -133,6 +133,16 @@ sim.power.t.test <- function(nGroup = 35, delta = .2, nSimulations = 10000){
 }
 
 sim.power.t.test (delta=.2)
+power.t.test(n=35, delta=.2)
 
+
+# distribution testing
+d <- c(10,20,10,10)
+chisq.test(d)
+
+d1 <- c(39,59,55,10)
+d2 <- c(4,87,5,90)
+d3 <- cbind(d1,d2)
+chisq.test(as.table(d3))
 
 
