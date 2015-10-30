@@ -56,6 +56,24 @@ sim <- subset(sim, sim$keep == TRUE)
 
 # version2: tapply
 
+# scope of variables
+x1 <- 1
+
+test <- function(){
+  print(x1) # global environment
+  x1 <- 3 # create new val in local env w same name
+  print(x1)
+  
+  a <- 4 # create new val in local env w different name
+  print(a)
+  
+  return("shalala")
+}
+
+#everything you want to keep: return it!!
+
+print(x1)
+test()
 
 
 
